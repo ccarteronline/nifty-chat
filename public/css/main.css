@@ -1,0 +1,47 @@
+body {
+	background: #cdc7d0;
+}
+.nnWrapper, .msWrapper {
+	padding:10px;
+}
+
+.nnInput {
+	margin-bottom: 10px;
+}
+
+.wMInput {
+	float: left;
+}
+
+.sendBtn, .changeNameBtn, .closeBtn {
+	width: 100%;
+}
+.closeBtn {
+	margin: 10px 0px 0px 0px;
+}
+.messagesWrapper {
+	height: 100%;
+	padding: 0px 10px 0px 10px;
+}
+#blocker {
+	position: relative;
+	width: 100%;
+	height: 100px;
+}
+.msWrapper {
+	position: fixed;
+	top:0px;
+	height: 150px;
+}
+.hideIt {
+	display:none;
+}
+.showIt {
+	display:block;
+}
+
+.centerObject {
+	position: fixed;
+	opacity: .7;
+	width:100%;
+}

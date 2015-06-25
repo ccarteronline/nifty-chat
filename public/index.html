@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html ng-app="niftyChat">
+	<head>
+		<title>Nifty Chat</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/navStyle.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, 
+		maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/angularjs1.3.15.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		
+		<!-- <script type="text/javascript" src="js/jquery.transit.min.js"></script>-->
+	</head>
+<body ng-controller="Chat-Object">
+	<button type="button" class="btn btn-primary btn-lg centerObject" 
+	ng-hide="revealMsgObj" ng-click="revealMessageObject()">Write a Message</button>
+
+	<nav class="navbar navbar-default navbar-fixed-bottom msWrapper" ng-hide="otherHider">
+		<form ng-submit="sendMessage();">
+			<input type="text" class="form-control nnInput" ng-click="disableScroller()" 
+			placeholder="{{ phTxt }}" ng-model="newMessage">
+			<button type="submit" class="btn btn-primary sendBtn">{{ submitBtn }}</button>
+		</form>
+		<button type="submit" class="btn btn-danger closeBtn" ng-click="hideSendMsgObj()">{{ closeBtn }}</button>
+	</nav>
+
+	<nav class="navbar navbar-default nnWrapper" ng-hide="hider">
+		<form ng-submit="createNickname();">
+			<input type="text" class="form-control nnInput" placeholder="{{topPlaceholder}}" ng-model="nn" maxlength="25">
+			<button type="submit" class="btn btn-primary changeNameBtn">{{ topSubmit }}</button>
+		</form>
+	</nav>
+	
+	<div class="messagesWrapper" ng-hide="showMsgs">
+		<div class="panel panel-primary" ng-repeat="msg in messages">
+		  <div class="panel-body">
+			<span><p><b>{{ msg.username }} said: </b></p></span>	
+		    {{ msg.message }}
+		  </div>
+		</div>
+	</div>
+
+	<div id="blocker">
+	</div>
+	
+</body>
+</html>
