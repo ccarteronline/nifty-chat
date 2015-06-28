@@ -4,32 +4,31 @@
 		<title>Nifty Chat</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/navStyle.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1, 
-		maximum-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="js/angularjs1.3.15.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		
-		<!-- <script type="text/javascript" src="js/jquery.transit.min.js"></script>-->
 	</head>
 <body ng-controller="Chat-Object">
 	<button type="button" class="btn btn-primary btn-lg centerObject" 
 	ng-hide="revealMsgObj" ng-click="revealMessageObject()">Write a Message</button>
 
-	<nav class="navbar navbar-default navbar-fixed-bottom msWrapper" ng-hide="otherHider">
+	<nav class="navbar navbar-default navbar-fixed-bottom msWrapper" ng-hide="otherHider" ng-class="inputFix">
 		<form ng-submit="sendMessage();">
-			<input type="text" class="form-control nnInput" ng-click="disableScroller()" 
-			placeholder="{{ phTxt }}" ng-model="newMessage">
-			<button type="submit" class="btn btn-primary sendBtn">{{ submitBtn }}</button>
+			<input type="text" class="form-control nnInput" placeholder="{{ phTxt }}" ng-model="newMessage" ng-click="disableScroll()">
+			<button type="submit" class="btn btn-primary sendBtn"><i class="fa fa-paper-plane"></i> {{ submitBtn }}</button>
 		</form>
-		<button type="submit" class="btn btn-danger closeBtn" ng-click="hideSendMsgObj()">{{ closeBtn }}</button>
+		<button type="submit" class="btn btn-danger closeBtn" ng-click="hideSendMsgObj()"><i class="fa fa-eye"></i> {{ closeBtn }}</button>
 	</nav>
 
 	<nav class="navbar navbar-default nnWrapper" ng-hide="hider">
+		<h5>Make a Nickname</h5>
 		<form ng-submit="createNickname();">
 			<input type="text" class="form-control nnInput" placeholder="{{topPlaceholder}}" ng-model="nn" maxlength="25">
-			<button type="submit" class="btn btn-primary changeNameBtn">{{ topSubmit }}</button>
+			<button type="submit" class="btn btn-primary changeNameBtn"><i class="fa fa-pencil"></i> {{ topSubmit }}</button>
 		</form>
 	</nav>
 	

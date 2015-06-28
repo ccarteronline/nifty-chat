@@ -16,6 +16,8 @@ Nifty Chat's JSON message structure is as follows:
 Use this structure for storing to a database. You can use various other API's, but if you would like, you can use Nifty Chat's default API here:
 https://github.com/ccarteronline/nifty-chat-api
 
+Change the `linkToService` variable to the actual URL to your service within the `main.js` file.
+
 
 ### Version
 1.0.0
@@ -40,5 +42,4 @@ License
 ----
 
 MIT
-
 

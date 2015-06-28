@@ -3,6 +3,7 @@ body {
 }
 .nnWrapper, .msWrapper {
 	padding:10px;
+	box-shadow: 0px 0px 40px grey;
 }
 
 .nnInput {
@@ -30,7 +31,7 @@ body {
 }
 .msWrapper {
 	position: fixed;
-	top:0px;
+	bottom:0px;
 	height: 150px;
 }
 .hideIt {
@@ -44,4 +45,8 @@ body {
 	position: fixed;
 	opacity: .7;
 	width:100%;
+}
+
+.iosFix {
+	position: absolute;
 }
