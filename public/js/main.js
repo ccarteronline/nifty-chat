@@ -14,7 +14,7 @@ angular.module('niftyChat', [])
 	$scope.msgAmnt = 0;
 
 	//change to ip address to allow use on other devices
-	var linkToService = 'http://remixchatapi.herokuapp.com/api/messages';
+	var linkToService = 'http://192.168.0.6:3000/api/messages';
 	//
 
 	//check if user has already made a nickname
