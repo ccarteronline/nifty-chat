@@ -14,7 +14,7 @@ angular.module('niftyChat', [])
 	$scope.msgAmnt = 0;
 
 	//change to ip address to allow use on other devices
-	var linkToService = 'http://nifty-chat-api.herokuapp.com/api/messages';
+	var linkToService = 'serviceURL/api/messages';
 	//
 
 	//check if user has already made a nickname
